@@ -1,0 +1,130 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog de Futebol</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: #fff;
+    }
+
+    header {
+      background: #111b2e;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ff88;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .post {
+      background: #111b2e;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .post h2 {
+      margin: 0 0 10px;
+      color: #00d4ff;
+    }
+
+    .post p {
+      color: #ccc;
+    }
+
+    .actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    button {
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .like {
+      background: #1db954;
+      color: white;
+    }
+
+    .dislike {
+      background: #e63946;
+      color: white;
+    }
+
+    .count {
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  ⚽ Blog de Futebol ao Vivo
+</header>
+
+<div class="container">
+
+  <div class="post">
+    <h2>🔥 Flamengo vence clássico emocionante</h2>
+    <p>Em um jogo cheio de emoção, o Flamengo venceu o rival com gol no último minuto.</p>
+
+    <div class="actions">
+      <button class="like" onclick="like(this)">👍 Like <span>0</span></button>
+      <button class="dislike" onclick="dislike(this)">👎 Dislike <span>0</span></button>
+    </div>
+  </div>
+
+  <div class="post">
+    <h2>⚽ Neymar pode voltar ao Brasil?</h2>
+    <p>Rumores indicam que Neymar pode considerar retorno ao futebol brasileiro.</p>
+
+    <div class="actions">
+      <button class="like" onclick="like(this)">👍 Like <span>0</span></button>
+      <button class="dislike" onclick="dislike(this)">👎 Dislike <span>0</span></button>
+    </div>
+  </div>
+
+  <div class="post">
+    <h2>🏆 Final da Champions League definida</h2>
+    <p>Dois gigantes europeus vão disputar o título mais importante da temporada.</p>
+
+    <div class="actions">
+      <button class="like" onclick="like(this)">👍 Like <span>0</span></button>
+      <button class="dislike" onclick="dislike(this)">👎 Dislike <span>0</span></button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function like(btn) {
+    let span = btn.querySelector("span");
+    span.innerText = parseInt(span.innerText) + 1;
+  }
+
+  function dislike(btn) {
+    let span = btn.querySelector("span");
+    span.innerText = parseInt(span.innerText) + 1;
+  }
+</script>
+
+</body>
+</html>
